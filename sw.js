@@ -2,7 +2,7 @@ self.addEventListener('install', event => {
     console.log("kotik installing...");
     event.waitUntil(
         caches.open("kotik").then((cache) =>
-            cache.add(['/img/sym4.png']))
+            cache.add('img/sym4.png'))
     );
 });
 
