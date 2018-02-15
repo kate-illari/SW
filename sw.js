@@ -13,9 +13,7 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-    console.log('kotik fetch!');
-    console.log(event.request.url);
-    console.log(location.origin);
+    console.log(event.request);
     const url = new URL(event.request.url);
     if (url.origin == location.origin && url.pathname == 'icon.png') {
         event.respondWith(caches.match('sym4.png'));
