@@ -15,6 +15,8 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
     console.log(event.request);
     const url = new URL(event.request.url);
+
+    debugger;
     console.log(url.origin == location.origin && url.pathname == 'img/icon.png');
     if (url.origin == location.origin && url.pathname == 'img/icon.png') {
         event.respondWith(caches.match('img/sym4.png'));
